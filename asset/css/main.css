@@ -1,0 +1,388 @@
+.sc-title {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dbdbdb;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.sc-service {
+    padding-top: 50px;
+    position: relative;
+}
+
+.sc-service .service-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sc-service .link-service::before {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 60px;
+    width: 60px;
+}
+
+.sc-service .link-service.serv::before {
+    background-position: -360px 0;
+}
+
+.sc-service .link-service.call::before {
+    background-position: 0 0;
+}
+
+.sc-service .link-service.job::before {
+    background-position: -120px 0;
+}
+
+.sc-service .link-service.real::before {
+    background-position: -300px 0;
+}
+
+.sc-service .link-service.study::before {
+    background-position: -180px 0;
+}
+
+.sc-service .link-service.welfare::before {
+    background-position: -960px 0;
+}
+
+.sc-service .link-service.living::before {
+    background-position: -780px 0;
+}
+
+.sc-service .link-service.younginfo::before {
+    background-position: -1140px 0;
+}
+
+.sc-service .link-service.myhand::before {
+    background-position: -1020px 0;
+}
+
+.sc-service .link-service.demo::before {
+    background-position: -60px 0;
+}
+
+.sc-service .link-service.city::before {
+    background-position: -600px 0;
+}
+
+.sc-service .service-item .city {
+    display: block;
+    text-align: center;
+}
+
+.sc-service .link-more {
+    display: inline-block;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    width: 112px;
+    height: 29px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: block;
+    font-size: 15px;
+    padding-left: 13px;
+    line-height: 28px;
+    background: url(../images/all-link.png) no-repeat right 13px top 50%;
+}
+
+.sc-covidhelp {
+    margin-top: 35px;
+    background: #eff4f8;
+
+}
+
+.sc-covidhelp .common-inner {
+    display: flex;
+    padding: 20px 0;
+}
+
+.sc-covidhelp a+a::before {
+    content: '';
+    width: 1px;
+    height: 60px;
+    background: #dbdbdb;
+    display: inline-block;
+    margin: 0 1px;
+}
+
+.sc-covidhelp a {
+    display: inline-block;
+}
+
+
+.inner2 {
+    padding: 50px 0 50px;
+    border-bottom: 2px solid #222222;
+    display: flex;
+    justify-content: space-between;
+}
+
+.inner2 .sc-title {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #dbdbdb;
+}
+
+.sc-event {
+    position: relative;
+    width: 31%;
+}
+
+.sc-festival {
+    position: relative;
+    width: 31%;
+}
+
+.board-item {
+    padding: 6px 0 6px 0;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+}
+
+.board-item span {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.badge-cul {
+    color: #9b64d3;
+}
+
+.badge-econo {
+    color: #069363;
+}
+
+.badge-envi {
+    color: #599100;
+}
+
+.inner2 .link-more {
+    position: absolute;
+    right: 0;
+    top: 2px;
+    width: 22px;
+    height: 20px;
+    border: 1px solid #ddd;
+    background-position: no-repeat -1px -1px;
+}
+
+.sc-often {
+    width: 31%;
+}
+
+.sc-often .sc-title {
+    border-bottom: none;
+}
+
+.sc-often .often-list {
+    padding: 14px 5px 14px 20px;
+    background: #eff4f8;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.sc-often .often-item {
+    display: block;
+    width: 50%;
+}
+
+.sc-often a {
+    display: block;
+    position: relative;
+    line-height: 28px;
+    margin-left: 10px;
+}
+
+.sc-often a::before {
+    content: '';
+    margin-right: 10px;
+    position: absolute;
+    background: #666666;
+    width: 2px;
+    height: 2px;
+    left: -10px;
+    top: 70%;
+    margin-top: -6px;
+
+}
+
+
+
+.sc-info {
+    padding-top: 40px;
+}
+
+.sc-info .sc-title {
+    border-bottom: none;
+}
+
+.sc-info .info-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sc-info .info-item {
+    display: block;
+    text-align: center;
+
+}
+
+.sc-info .link-info::before {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    background-position: cover;
+}
+
+.sc-info .link-info.living::before {
+    background: url(../images/info01.png)no-repeat center;
+}
+
+.sc-info .link-info.eco::before {
+    background: url(../images/info02.png)no-repeat center;    
+}
+
+.sc-info .link-info.traff::before {
+    background: url(../images/info03.png)no-repeat center;    
+}
+
+.sc-info .link-info.envi::before {
+    background: url(../images/info04.png)no-repeat center;    
+}
+
+.sc-info .link-info.welfare::before {
+    background: url(../images/info05.png)no-repeat center;    
+}
+
+.sc-info .link-info.safe::before {
+    background: url(../images/info06.png)no-repeat center;    
+}
+
+.sc-info .link-info.cul::before {
+    background: url(../images/info07.png)no-repeat center;    
+}
+
+.sc-info .link-info.admin::before {
+    background: url(../images/info08.png)no-repeat center;    
+}
+
+
+.sc-news{
+    position: relative;
+    padding: 40px 0 30px;
+}
+.sc-news .sc-title{
+    border: none;
+}
+.sc-news ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.sc-news li{
+    width: 24%;
+    
+}
+.sc-news .link-news{
+    display: block;
+    
+}
+.sc-news .img-box{
+    position: relative;
+    overflow: hidden;
+}
+.sc-news .news-img{
+    width: 100%;
+}
+.sc-news .news-img:hover{
+    transform: scale(1.1);
+    transition: .3s;
+}
+
+.sc-news .badge-envi{
+    position: absolute;
+    bottom: 0; left: 0;
+    color: #fff;
+    background-color: #599100;
+    font-weight: 700;
+    padding: 5px 28px;
+    font-size: 14px;
+}
+.sc-news .desc{
+    margin: 20px 0;
+}
+.sc-news .link-more{
+    color: #7d7d7d;
+    display: inline-block;
+    font-size: 15px;
+    position: absolute;
+    top: 50px;right:0px;
+
+}
+.sc-news .link-more::after{
+    content: '';
+    display: inline-block;
+    background-position: 0 -259px;
+    width: 17px; height: 17px;
+   
+}
+.inner3{
+    display: flex;
+    justify-content: space-between;
+}
+.inner3 .sc-title{
+    border: none;
+    margin-bottom: 0px;
+}
+
+.sc-video{}
+.sc-video .link-video{
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+.sc-video .video-img{
+    width: 100%;
+    display: block;
+    transition: .3s;
+}
+.sc-video .video-img:hover{
+    transform: scale(1.1);
+    
+}
+.sc-video .video-sub{
+    position: absolute;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    bottom: 0;
+    overflow : hidden;
+    text-overflow : ellipsis;
+    white-space : nowrap;
+    display : block;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+.sc-new02{}
+.sc-new02 .news-list{}
+.sc-new02 .news-item{
+    margin: 8px 0;
+    display: block;
+}
+.sc-new02{}

@@ -3,7 +3,7 @@ body{
     letter-spacing: -0.05em;
     color: #222;
     min-width: 1152px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     line-height: 1.35em;
 }
 
@@ -22,10 +22,29 @@ body{
     min-width: 1152px;
 }
 
-.common-inner::after{
+/* .common-inner::after{
     content: '';
     display: block;
     clear: both;
+} */
+
+.header .logo,
+.inner2 .link-more,
+.sc-news .link-more::after
+{
+    background-size: 300px 300px;
+    background-image: url(../images/icons01.png);
+    background-repeat: no-repeat;
 }
 
+.header .logo-seoul{
+    background-size: 180px 110px;
+    background-image: url(../images/logo-seoul.png);
+    background-repeat: no-repeat;
+}
 
+.sc-service .link-service::before{
+    background-size: 1200px 60px;
+    background-image: url(../images/main-serv.png);
+    background-repeat: no-repeat;
+}
