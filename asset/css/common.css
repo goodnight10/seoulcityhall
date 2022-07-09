@@ -1,0 +1,31 @@
+body{
+    font-family: 'Nanum Gothic', sans-serif;
+    letter-spacing: -0.05em;
+    color: #222;
+    min-width: 1152px;
+    margin: 0 auto;
+    line-height: 1.35em;
+}
+
+.blind{
+    height: 1px; width: 1px;
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+    clip: rect(0 0 0 0);
+}
+
+.common-inner{
+    margin: 0 auto;
+    width: 1152px;
+    position: relative;
+    min-width: 1152px;
+}
+
+.common-inner::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
