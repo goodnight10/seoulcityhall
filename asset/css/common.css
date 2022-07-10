@@ -30,7 +30,8 @@ body{
 
 .header .logo,
 .inner2 .link-more,
-.sc-news .link-more::after
+.sc-news .link-more::after,
+.footer .call-area
 {
     background-size: 300px 300px;
     background-image: url(../images/icons01.png);
@@ -43,8 +44,30 @@ body{
     background-repeat: no-repeat;
 }
 
+.sc-slide .main-news::before,
+.sc-slide .citizen::before
+{
+    background-size: 300px 300px;
+    background-image: url(../images/icons02.png);
+    background-repeat: no-repeat;
+}
+
 .sc-service .link-service::before{
     background-size: 1200px 60px;
     background-image: url(../images/main-serv.png);
+    background-repeat: no-repeat;
+}
+
+.sc-sns .sc-title::after,
+.sc-sns .link-sns
+{
+    background-size: 280px 40px;
+    background-image: url(../images/snsicons.png);
+    background-repeat: no-repeat;
+}
+
+.footer .link-sns{
+    background-size: 175px 50px;
+    background-image: url(../images/icons2.png);
     background-repeat: no-repeat;
 }

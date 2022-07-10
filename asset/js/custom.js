@@ -2,7 +2,18 @@
     $(function(){
 
         
-        var swiper = new Swiper(".main-slide", {
+        var swiper = new Swiper(".swiper.main1", {
+            loop:true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+        var swiper = new Swiper(".swiper.main2", {
             loop:true,
             autoplay: {
                 delay: 2500,
@@ -41,6 +52,22 @@
       var appendNumber = 9;
       var prependNumber = 1;
 
+
+
+
+      var swiper = new Swiper(".banner-slide", {
+        slidesPerView:3,
+        loop:true,
+        allowTouchMove :false,
+        spaceBetween:40,
+        autoplay: {
+            delay: 3000,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
 
 
 
