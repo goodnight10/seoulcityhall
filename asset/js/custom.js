@@ -7,50 +7,34 @@
             autoplay: {
                 delay: 2500,
                 disableOnInteraction: false,
+                allowTouchMove : false,
             },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+              },
+              navigation: {
+                nextEl: ".btn-next",
+                prevEl: ".btn-prev",
+              },
         });
         var swiper = new Swiper(".swiper.main2", {
             loop:true,
             autoplay: {
                 delay: 2500,
                 disableOnInteraction: false,
+                allowTouchMove : false,
             },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+              },
+              navigation: {
+                nextEl: ".btn-next",
+                prevEl: ".btn-prev",
+              },
         });
         // 슬라이드버튼 형제는 display:none;처리
-
-        
-
-
-
-        var swiper = new Swiper(".swiper.bottom-slide", {
-        // loop:true,
-        slidesPerView: 3,
-        centeredSlides: true,
-        spaceBetween: 30,
-        // autoplay: {
-        //         delay: 2500,
-        //         disableOnInteraction: false,
-        // },
-        pagination: {
-          el: ".swiper-pagination",
-          type: "fraction",
-        },
-        // navigation: {
-        //   nextEl: ".swiper-button-next",
-        //   prevEl: ".swiper-button-prev",
-        // },
-      });
-
-      var appendNumber = 9;
-      var prependNumber = 1;
 
 
 
@@ -61,37 +45,79 @@
         allowTouchMove :false,
         spaceBetween:40,
         autoplay: {
-            delay: 3000,
+            delay: 2000,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
         },
         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
+          nextEl: ".btn-next",
+          prevEl: ".btn-prev",
+        }
     });
 
+    $('.main-news').click(function(e){
+      e.preventDefault();
+      if ($('.slide.slide02').hasClass('active')) {
+        $('.slide.slide02').removeClass('active')
+        $('.slide.slide01').addClass('active')
+      } 
+    })
+
+    $('.citizen').click(function(e){
+      e.preventDefault();
+      if ($('.slide.slide01').hasClass('active')) {
+        $('.slide.slide01').removeClass('active')
+        $('.slide.slide02').addClass('active')
+      } 
+    })
+
+    $('.btn-stop').click(function(e){
+      e.preventDefault();
+      $('.btn-start').addClass('active');
+      $('.btn-stop').removeClass('active');
+      swiper.autoplay.stop();
+    })
+
+    $('.btn-start').click(function(e){
+      e.preventDefault();
+      $('.btn-stop').addClass('active');
+      $('.btn-start').removeClass('active');
+      swiper.autoplay.start();
+    })
+
+    // $('.btn-related').click(function(e){
+    //   e.preventDefault();
+    //   $('.sub-list').toggleClass('active')
+    //   // $(this).next('ul').stop().slideUp();
+    //   $(this).siblings().stop().slideToggle();
+    // })
+    
+    $('.btn-related').click(function(e){
+      e.preventDefault();
+      if ($(this).hasClass('active')) {
+        $(this).removeClass('active')
+        $(this).next('ul').slideUp()
+      } else {
+        $(this).addClass('active')
+        $(this).next('ul').stop().slideDown()
+        $(this).siblings('.sub-list').removeClass('active');
+      }
+
+      
+
+      // $(this).addClass('active').siblings().removeClass('active');
+    })
 
 
-      // $('.bottom-title').click(function(e){
-        //         e.preventDefault();
-        //         $('.bottomnav-list').stop().slideUp();
-        //         $(this).siblings().stop().slideToggle();
-
-        //     })
-
-
-        $('.bottomnav-tab a').click(function(e){
-                e.preventDefault();
-                link = $(this).attr('href');
-                $(this).addClass('active').siblings().removeClass('active');
-                $(link).addClass('active').siblings().removeClass('active');
-            })
 
 
         
 
             $(window).scroll(function(){
                 curr=$(window).scrollTop();
-                target=$('.gnb-top').offset().top;
+                target=$('.header-bottom').offset().top;
 
                 if(curr >= target){
                     $('.upper').addClass('active')

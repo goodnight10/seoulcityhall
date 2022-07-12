@@ -31,7 +31,12 @@ body{
 .header .logo,
 .inner2 .link-more,
 .sc-news .link-more::after,
-.footer .call-area
+.footer .call-area,
+.header .btn-search,
+.btn-prev,
+.btn-next,
+.btn-start,
+.btn-stop
 {
     background-size: 300px 300px;
     background-image: url(../images/icons01.png);

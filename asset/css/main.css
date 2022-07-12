@@ -33,23 +33,53 @@
     color: #fff;
 }
 .sc-slide .title{
-    
+    display: flex;
+    justify-content: center;
 }
 .sc-slide .title a{
     display: block;
     height: 100%;
+    margin-top: 50px;
 }
-.sc-slide .main-news::before{
-    height: 50px; width: 50px;
-    content: '';
-    display: block;
-    background-position: 0 0;
+.sc-slide .main-news{
     
 }
-.sc-slide .citizen::before{
-    height: 50px; width: 50px;
+
+.sc-slide .main-news::before{
+    background-color: #fff;
+    background-position: 0 0;
+    border-radius: 50%;
+    
     content: '';
     display: block;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 10px;
+}
+.sc-slide .active .title a::after{
+    content: " ";
+    position: absolute;
+    z-index: 10;
+    left: 99%;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 0 25px 32px;
+    border-color: transparent transparent transparent #0158a8;
+    margin-top: -25px;
+}
+
+.sc-slide .citizen::before{
+    background-color: #fff;
+    background-position: 0 0;
+    border-radius: 50%;
+    
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 10px;
     background-position: -50px 0px;
 }
 .sc-slide .swiper{
@@ -88,6 +118,84 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     box-sizing: border-box;
+}
+
+.sc-slide .control-box{
+    position: absolute;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    top: 90%;
+    right: 20px;
+    width: 110px;
+    height: 32px;
+    z-index: 2;
+}
+.sc-slide .swiper-pagination{
+    position: absolute;
+    font-size: 13px;
+    right: 70px;
+    display: flex;
+    top: 5px;
+    right: 170px;
+    width: 20%;
+}
+.sc-slide .swiper-pagination::after{
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: -10px;
+    width: 1px;
+    height: 24px;
+    background: rgba(255,255,255,.5);
+}
+.sc-slide .btn-prev{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 18px; height: 18px;
+    background-position: -5px -165px;
+    /* background-position: -241px -285px; */
+    position: absolute;
+    right: 36px;
+    
+}
+
+.sc-slide .play-box{
+    display: flex;
+    position: absolute;
+    right: 18px;
+}
+.sc-slide .btn-start.active{
+    opacity: 1;
+    display: inline-block;
+}
+.sc-slide .btn-start{
+    display: none;
+    opacity: 0;
+    width: 18px; height: 18px;
+    /* background-position: -285px -285px; */
+    background-position: -5px -165px;
+}
+.sc-slide .btn-stop.active{
+    opacity: 1;
+    display: inline-block;
+}
+.sc-slide .btn-stop{
+    display: none;
+    opacity: 0;
+    width: 18px; height: 18px;
+    /* background-position: -269px -285px; */
+    background-position: -5px -160px;
+    
+}
+
+.sc-slide .btn-next{
+    display: inline-block;
+    width: 18px; height: 18px;
+    /* background-position: -256px -285px; */
+    background-position: -5px -160px;
+    position: absolute;
+    right: 0;
 }
 
 /* 코로나 ----------------------------*/
@@ -268,8 +376,28 @@
 .sc-covidhelp .common-inner {
     display: flex;
     padding: 20px 0;
+    
 }
 
+.sc-covidhelp .covid-item{
+   
+}
+.sc-covidhelp .covid-item:first-child:before{
+    display: none;
+}
+.sc-covidhelp .covid-item::before{
+    top: 20px;
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 60px;
+    background: #dbdbdb;
+    display: inline-block;
+    
+}
+
+
+/* 
 .sc-covidhelp a+a::before {
     content: '';
     width: 1px;
@@ -277,10 +405,10 @@
     background: #dbdbdb;
     display: inline-block;
     margin: 0 1px;
-}
+} */
 
 .sc-covidhelp a {
-    display: inline-block;
+    
 }
 
 
@@ -653,6 +781,27 @@
 .sc-banner .bottom-slide img{
     width: 100%;
 }
+.sc-banner .control-box{
+    position: relative;
+    display: block;
+    height: 32px;
+    margin-top: 5px;  
+
+}
+.sc-banner .swiper-pagination{
+    position: absolute;
+    display: block;
+    right: 70px;
+    top: 50%;
+    width: auto;
+    transform: translateY(-50%);
+}
+.sc-banner .slide-btn-box{
+}
+.sc-banner .btn-prev{}
+.sc-banner .play-box{}
+.sc-banner .btn-stop{}
+.sc-banner .btn-next{}
 
 .sc-related{
     padding-bottom: 20px;
@@ -688,16 +837,18 @@
     border-color: #373737;
     border-width: 0px 2px 2px 0px;
     transform: rotate(-135deg);
+    transition: .3s;
     transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
     transform-origin: center center;
 }
+
 .sc-related .sub-list{
     opacity: 0;
     display: none;
     
     
     position: absolute;
-    top: -222px;
+    /* top: px; */
     left: -.5px;
     background: #fff;
     border:1px solid #d0d0d0;
@@ -708,14 +859,23 @@
     flex-wrap: wrap;
     width: 289.5%;
 }
+.sc-related .sub-list.l01{
+    display: none;
+}
 .sc-related .sub-list.l02{
+    display: none;
     left: -384.5px;
 }
 .sc-related .sub-list.l03{
+    display: none;
     left: -768.5px;
 }
+
 .sc-related .btn-related.active{
     background: #e2e2e2;
+}
+.sc-related .btn-related.active span::after{
+    transform: rotate(45deg);
 }
 .sc-related .sub-list.active{
     opacity: 1;
