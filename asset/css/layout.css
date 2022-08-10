@@ -19,12 +19,13 @@
 
 .header .gnb-area{
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     margin-left: 50px;
+    flex: 1;
 }
 .header .gnb-list{
     display: flex;
-    
+
 }
 .header .gnb-item{
     padding: 0 10px;
@@ -32,7 +33,7 @@
     font-weight: 700;
 }
 .header .util-area{
-    margin-left: 253px;
+    display: flex;
 }
 .header .link-util{
     display: inline-block;
@@ -165,7 +166,6 @@
 }
 
 
-.footer{}
 .footer .info-area{
     display: flex;
     justify-content: space-between;
@@ -231,7 +231,6 @@
     background-position:-180px 0 ;
     margin: 10px 40px 0 0;
 }
-.footer .add-area{}
 .footer .add-box{
     padding-bottom: 2px;
     font-size: 12px;
@@ -253,13 +252,14 @@
 
 .footer .upper{
     position: fixed;
-    bottom: -100px; right: 130px;
     transition: .5s;
     opacity: 0;
+    left: 50%;
+    margin-left: 600px;
+    bottom: -100px;
 }
 .footer .upper.active{
     opacity: 1;
     display: block;
-    position: fixed;
-    bottom: 98px; right: 130px;
+    bottom: 98px;
 }

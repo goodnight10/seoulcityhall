@@ -10,36 +10,27 @@
 .sc-slide .slide.active{
     z-index: 2;
 }
-.sc-slide .slide01{
-    
-}
-.sc-slide .slide02{
-   
-}
+
 
 .sc-slide .title{
-    text-align: center;
     font-size: 14px;
     font-weight: 700;
     background-color: #d2e1e9;
     color: #333;
     display: block;
     width: 80px; height: 173px;
-
-    
+    display: flex;
+    justify-content: center;
 }
 .sc-slide .active .title{
     background-color: #0158a8;
     color: #fff;
 }
-.sc-slide .title{
-    display: flex;
-    justify-content: center;
-}
+
 .sc-slide .title a{
     display: block;
-    height: 100%;
-    margin-top: 50px;
+    padding-top: 50px;
+    
 }
 .sc-slide .main-news{
     
@@ -100,6 +91,7 @@
 .sc-slide .title{
     position: absolute;
     top: 2px;
+    cursor: pointer;
 }
 .sc-slide figure{
     position: relative;
@@ -126,7 +118,7 @@
     display: flex;
     align-items: center;
     top: 90%;
-    right: 20px;
+    right: 10px;
     width: 110px;
     height: 32px;
     z-index: 2;
@@ -134,17 +126,16 @@
 .sc-slide .swiper-pagination{
     position: absolute;
     font-size: 13px;
-    right: 70px;
     display: flex;
     top: 5px;
-    right: 170px;
+    right: 100px;
     width: 20%;
 }
 .sc-slide .swiper-pagination::after{
     content: '';
     position: absolute;
     top: -1px;
-    right: -10px;
+    right: -20px;
     width: 1px;
     height: 24px;
     background: rgba(255,255,255,.5);
@@ -152,9 +143,8 @@
 .sc-slide .btn-prev{
     display: inline-block;
     box-sizing: border-box;
-    width: 18px; height: 18px;
-    background-position: -5px -165px;
-    /* background-position: -241px -285px; */
+    width: 21px; height: 18px;
+    background-position: -241px -285px;
     position: absolute;
     right: 36px;
     
@@ -173,8 +163,7 @@
     display: none;
     opacity: 0;
     width: 18px; height: 18px;
-    /* background-position: -285px -285px; */
-    background-position: -5px -165px;
+    background-position: -269px -285px;
 }
 .sc-slide .btn-stop.active{
     opacity: 1;
@@ -184,16 +173,15 @@
     display: none;
     opacity: 0;
     width: 18px; height: 18px;
-    /* background-position: -269px -285px; */
-    background-position: -5px -160px;
+    background-position: -285px -285px;
+    
     
 }
 
 .sc-slide .btn-next{
     display: inline-block;
     width: 18px; height: 18px;
-    /* background-position: -256px -285px; */
-    background-position: -5px -160px;
+    background-position: -256px -285px;
     position: absolute;
     right: 0;
 }
@@ -603,10 +591,11 @@
 }
 .sc-news .news-img{
     width: 100%;
+    transition: .3s;
+
 }
 .sc-news .news-img:hover{
     transform: scale(1.1);
-    transition: .3s;
 }
 
 .sc-news .badge-envi{
@@ -773,12 +762,13 @@
 
 
 .sc-banner{
-    position: relative;
+    /* position: relative; */
     padding: 50px 0 50px 0;
     box-sizing: border-box;
 }
 .sc-banner .banner-slide{
-    height: 122px;
+    height: 152px;
+    position: relative;
 }
 .sc-banner .bottom-slide{
     display: block;
@@ -788,26 +778,64 @@
     width: 100%;
 }
 .sc-banner .control-box{
-    position: relative;
-    display: block;
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    display: flex;
+    justify-content: end;
     height: 32px;
-    margin-top: 5px;  
-
+    width: 10%;
+    /* margin-top: 4px;   */
+    z-index: 15;
 }
 .sc-banner .swiper-pagination{
-    position: absolute;
     display: block;
-    right: 70px;
-    top: 50%;
-    width: auto;
-    transform: translateY(-50%);
+    color: #000;
+    width: 40px;
+    
 }
 .sc-banner .slide-btn-box{
+    border: 1px solid #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
 }
-.sc-banner .btn-prev{}
-.sc-banner .play-box{}
-.sc-banner .btn-stop{}
-.sc-banner .btn-next{}
+.sc-banner .btn-prev{
+    display: block;
+    height: 20px; width: 20px;
+    background-position: -45px -43px;
+    border-right: 1px solid #999;
+}
+.sc-banner .play-box{
+    display: block;
+    height: 20px; width: 20px;
+}
+.sc-banner .btn-start{
+    display: none;
+    height: 20px; width: 20px;
+    background-position: -101px -43px;
+}
+.sc-banner .btn-start.active{
+    display:block;
+}
+.sc-banner .btn-stop{
+    display: none;
+    height: 20px; width: 20px;
+    background-position:-65px -43px;
+    
+}
+.sc-banner .btn-stop.active{
+    display: block;
+}
+.sc-banner .btn-next{
+    display: block;
+    height: 20px; width: 20px;
+    background-position: -86px -43px;
+    border-left: 1px solid #999;
+}
+
 
 .sc-related{
     position: relative;
@@ -850,6 +878,7 @@
     transform-origin: center center;
 }
 
+
 .sc-related .sub-list{
     display: none;
     position: absolute;
@@ -864,15 +893,7 @@
     overflow: hidden;
   
 }
-.sc-related .sub-list.l01{
-    
-}
-.sc-related .sub-list.l02{
-   
-}
-.sc-related .sub-list.l03{
-   
-}
+
 
 .sc-related .btn-related.active{
     background: #e2e2e2;
@@ -880,10 +901,7 @@
 .sc-related .btn-related.active span::after{
     transform: rotate(45deg);
 }
-.sc-related .sub-list.active{
-    /* opacity: 1;
-    display: block; */
-}
+
 .sc-related .sub-list li{
     float: left;
     width: 25%;

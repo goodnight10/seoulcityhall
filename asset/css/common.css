@@ -3,7 +3,6 @@ body{
     letter-spacing: -0.05em;
     color: #222;
     min-width: 1152px;
-    /* margin: 0 auto; */
     line-height: 1.35em;
 }
 
@@ -22,24 +21,33 @@ body{
     min-width: 1152px;
 }
 
-/* .common-inner::after{
-    content: '';
-    display: block;
-    clear: both;
-} */
-
 .header .logo,
 .inner2 .link-more,
 .sc-news .link-more::after,
 .footer .call-area,
-.header .btn-search,
-.btn-prev,
-.btn-next,
-.btn-start,
-.btn-stop
+.sc-banner .btn-prev,
+.sc-banner .btn-next,
+.header .btn-search
 {
     background-size: 300px 300px;
     background-image: url(../images/icons01.png);
+    background-repeat: no-repeat;
+}
+
+.sc-slide .btn-prev,
+.sc-slide .btn-next,
+.sc-slide .btn-start,
+.sc-slide .btn-stop,
+.sc-banner .btn-start
+{
+    background-size: 300px 300px;
+    background-image: url(../images/icons01-1.png);
+    background-repeat: no-repeat;
+}
+.sc-banner .btn-stop
+{
+    background-size: 300px 300px;
+    background-image: url(../images/banner-slide.png);
     background-repeat: no-repeat;
 }
 

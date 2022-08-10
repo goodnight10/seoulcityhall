@@ -1,7 +1,7 @@
 $(function () {
 
  /**
-     * 슬라이드1
+     * 메인 슬라이드1
      *
      * @version 1.0.0
      * @since 2022-07-10
@@ -25,7 +25,7 @@ $(function () {
   });
 
    /**
-     * 슬라이드2
+     * 메인 슬라이드2
      *
      * @version 1.0.0
      * @since 2022-07-10
@@ -52,13 +52,13 @@ $(function () {
 
 
    /**
-     * 슬라이드3
+     * 하단 슬라이드3
      *
      * @version 1.0.0
      * @since 2022-07-10
      * @author jy
      */
-  var swiper3 = new Swiper(".banner-slide", {
+  var swiper3 = new Swiper(".swiper.banner-slide", {
     slidesPerView: 3,
     loop: true,
     allowTouchMove: false,
@@ -77,7 +77,7 @@ $(function () {
   });
 
    /**
-     * 슬라이드1,2 바꾸기
+     * 슬라이드1,2클릭시 바꾸기
      *
      * @version 1.0.0
      * @since 2022-07-12
@@ -179,6 +179,18 @@ $(function () {
     $(this).toggleClass('active').parent('li').siblings('li').children('a').removeClass('active');
   });
 
+  $(document).mouseup(function (e){
+    var sub = $('.relaterd-item');
+    if(sub.has(e.target).length === 0){
+      $('.sub-list').hide();
+      $('.btn-related').removeClass('active')
+    }
+  });
+
+
+
+
+
 
 
 /**
@@ -188,7 +200,13 @@ $(function () {
      * @since 2022-07-12
      * @author jy
      */
+//위로 올라가기
+ $( '.upper' ).click( function() {
+	$( 'html, body' ).animate( { scrollTop : 0 }, 300 );
+	return false;
+} );
 
+//버튼나타나는 위치
   $(window).scroll(function () {
     curr = $(window).scrollTop();
     target = $('.header-bottom').offset().top;
