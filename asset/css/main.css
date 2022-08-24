@@ -761,7 +761,7 @@
 .sc-banner .control-box{
     position: absolute;
     bottom: -10px;
-    right: 0;
+    right: 4px;
     display: flex;
     justify-content: end;
     height: 32px;
