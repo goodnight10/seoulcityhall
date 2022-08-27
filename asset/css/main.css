@@ -32,9 +32,7 @@
     padding-top: 50px;
     
 }
-.sc-slide .main-news{
-    
-}
+
 
 .sc-slide .main-news::before{
     background-color: #fff;
@@ -187,9 +185,7 @@
 }
 
 /* 코로나 ----------------------------*/
-.sc-covid .covid-area{
     
-}
 .sc-covid .covid-new{
     position: relative;
     width: 360px;
@@ -242,7 +238,6 @@
     display: block;
 }
 /* 시장====================== */
-.sc-may{}
 .sc-may .mayor-area{
     position: relative;
 }
@@ -251,7 +246,6 @@
     display: block;
     width: 360px;
 }
-.sc-may .may-imgbg{}
 .sc-may .mayor-wrap{
     position: absolute;
     display: inline-block;
@@ -439,7 +433,6 @@
     width: 22px;
     height: 20px;
     border: 1px solid #ddd;
-    background-position: no-repeat -1px -1px;
 }
 
 .sc-often {
@@ -511,7 +504,6 @@
     margin: auto;
     height: 100px;
     width: 100px;
-    background-position: cover;
 }
 
 .sc-info .link-info.living::before {
@@ -629,7 +621,6 @@
     line-height: 38px;
 }
 
-.sc-video{}
 .sc-video .link-video{
     display: block;
     position: relative;
@@ -685,7 +676,6 @@
 
 .sc-sns{
     background: url(../images/snsbg.jpg) no-repeat 100%;
-    background-position: cover;
     width: 350px; 
     position: relative;
     padding: 10px 15px;
