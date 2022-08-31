@@ -1,12 +1,12 @@
 $(function () {
 
- /**
-     * 메인 슬라이드1
-     *
-     * @version 1.0.0
-     * @since 2022-07-10
-     * @author jy
-     */
+  /**
+   * 메인 슬라이드1
+   *
+   * @version 1.0.0
+   * @since 2022-07-10
+   * @author jy
+   */
   var swiper1 = new Swiper(".swiper.main1", {
     loop: true,
     autoplay: {
@@ -24,13 +24,13 @@ $(function () {
     },
   });
 
-   /**
-     * 메인 슬라이드2
-     *
-     * @version 1.0.0
-     * @since 2022-07-10
-     * @author jy
-     */
+  /**
+   * 메인 슬라이드2
+   *
+   * @version 1.0.0
+   * @since 2022-07-10
+   * @author jy
+   */
   var swiper2 = new Swiper(".swiper.main2", {
     loop: true,
     autoplay: {
@@ -47,17 +47,17 @@ $(function () {
       prevEl: ".btn-prev",
     },
   });
-  
 
 
 
-   /**
-     * 하단 슬라이드3
-     *
-     * @version 1.0.0
-     * @since 2022-07-10
-     * @author jy
-     */
+
+  /**
+   * 하단 슬라이드3
+   *
+   * @version 1.0.0
+   * @since 2022-07-10
+   * @author jy
+   */
   var swiper3 = new Swiper(".swiper.banner-slide", {
     slidesPerView: 3,
     loop: true,
@@ -76,36 +76,34 @@ $(function () {
     }
   });
 
-   /**
-     * 슬라이드1,2클릭시 바꾸기
-     *
-     * @version 1.0.0
-     * @since 2022-07-12
-     * @author jy
-     */
+  /**
+   * 슬라이드1,2클릭시 바꾸기
+   *
+   * @version 1.0.0
+   * @since 2022-07-12
+   * @author jy
+   */
   $('.main-news').click(function (e) {
     e.preventDefault();
-    if ($('.slide.slide02').hasClass('active')) {
-      $('.slide.slide02').removeClass('active')
-      $('.slide.slide01').addClass('active')
-    }
+
+    $('.slide.slide01').addClass('active')
+    $('.slide.slide02').removeClass('active')
+
   })
 
   $('.citizen').click(function (e) {
     e.preventDefault();
-    if ($('.slide.slide01').hasClass('active')) {
-      $('.slide.slide01').removeClass('active')
-      $('.slide.slide02').addClass('active')
-    }
+    $('.slide.slide01').removeClass('active')
+    $('.slide.slide02').addClass('active')
   })
 
   /**
-     * 슬라이드1 정지, 재생버튼
-     *
-     * @version 1.0.0
-     * @since 2022-07-13
-     * @author jy
-     */
+   * 슬라이드1 정지, 재생버튼
+   *
+   * @version 1.0.0
+   * @since 2022-07-13
+   * @author jy
+   */
 
   $('.main1 .btn-stop').click(function (e) {
     e.preventDefault();
@@ -121,12 +119,12 @@ $(function () {
     $('.main1 .btn-start').removeClass('active');
   })
   /**
-       * 슬라이드2 정지, 재생버튼
-       *
-       * @version 1.0.0
-       * @since 2022-07-13
-       * @author jy
-       */
+   * 슬라이드2 정지, 재생버튼
+   *
+   * @version 1.0.0
+   * @since 2022-07-13
+   * @author jy
+   */
   $('.main2 .btn-stop').click(function (e) {
     e.preventDefault();
     swiper2.autoplay.stop();
@@ -141,12 +139,12 @@ $(function () {
   })
 
   /**
-     * 슬라이드3 정지, 재생버튼
-     *
-     * @version 1.0.0
-     * @since 2022-07-13
-     * @author jy
-     */
+   * 슬라이드3 정지, 재생버튼
+   *
+   * @version 1.0.0
+   * @since 2022-07-13
+   * @author jy
+   */
   $('.banner-slide .btn-stop').click(function (e) {
     e.preventDefault();
     swiper3.autoplay.stop();
@@ -166,12 +164,12 @@ $(function () {
 
 
   /**
-     * 하단메뉴 열림/닫힘
-     *
-     * @version 1.0.0
-     * @since 2022-07-13
-     * @author jy
-     */
+   * 하단메뉴 열림/닫힘
+   *
+   * @version 1.0.0
+   * @since 2022-07-13
+   * @author jy
+   */
   $('.btn-related').click(function (e) {
     e.preventDefault();
     $(this).next('ul').slideToggle();
@@ -179,9 +177,9 @@ $(function () {
     $(this).toggleClass('active').parent('li').siblings('li').children('a').removeClass('active');
   });
 
-  $(document).mouseup(function (e){
+  $(document).mouseup(function (e) {
     var sub = $('.relaterd-item');
-    if(sub.has(e.target).length === 0){
+    if (sub.has(e.target).length === 0) {
       $('.sub-list').hide();
       $('.btn-related').removeClass('active')
     }
@@ -193,20 +191,22 @@ $(function () {
 
 
 
-/**
-     * upper버튼
-     *
-     * @version 1.0.0
-     * @since 2022-07-12
-     * @author jy
-     */
-//위로 올라가기
- $( '.upper' ).click( function() {
-	$( 'html, body' ).animate( { scrollTop : 0 }, 300 );
-	return false;
-} );
+  /**
+   * upper버튼
+   *
+   * @version 1.0.0
+   * @since 2022-07-12
+   * @author jy
+   */
+  //위로 올라가기
+  $('.upper').click(function () {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 300);
+    return false;
+  });
 
-//버튼나타나는 위치
+  //버튼나타나는 위치
   $(window).scroll(function () {
     curr = $(window).scrollTop();
     target = $('.header-bottom').offset().top;
